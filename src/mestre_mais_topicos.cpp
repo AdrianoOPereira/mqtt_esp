@@ -63,6 +63,8 @@ void loop() {
     } else if (comando == "OFF1") {
       client.publish("sdkjgsdgryf45h3746/CAIXA", comando.c_str());
       Serial.println("Desliga lampada tzn");
+    } else {
+      Serial.println("Comando inválido: Procure a equipe do TI...")
     }
   }
 }
