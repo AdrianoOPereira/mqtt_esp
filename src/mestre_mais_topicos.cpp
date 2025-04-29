@@ -52,19 +52,17 @@ void loop() {
     comando.trim(); // Remove espaços extras
 
     if (comando == "TZO") {
-      client.publish("sdkjgsdgryf45h3745/CAIXA", comando.c_str());
+      client.publish("sdkjgsdgryf45h3745/CAIXA/lampada1", comando.c_str());
       Serial.println("Liga lampada tzo");
-    } else if (comando == "OFF") {
-      client.publish("sdkjgsdgryf45h3745/CAIXA", comando.c_str());
+    } else if (comando == "OFF1") {
+      client.publish("sdkjgsdgryf45h3745/CAIXA/lampada1", comando.c_str());
       Serial.println("Desliga lampada tzo");
     } else if (comando == "TZN") {
-      client.publish("sdkjgsdgryf45h3746/CAIXA", comando.c_str());
+      client.publish("sdkjgsdgryf45h3746/CAIXA/lampada2", comando.c_str());
       Serial.println("Liga lampada tzn");
-    } else if (comando == "OFF1") {
-      client.publish("sdkjgsdgryf45h3746/CAIXA", comando.c_str());
+    } else if (comando == "OFF2") {
+      client.publish("sdkjgsdgryf45h3746/CAIXA/lampada2", comando.c_str());
       Serial.println("Desliga lampada tzn");
-    } else {
-      Serial.println("Comando inválido: Procure a equipe do TI...")
     }
   }
 }
