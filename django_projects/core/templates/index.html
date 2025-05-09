@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle da Lâmpada</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input, button { padding: 8px; margin: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Controle da Lâmpada</h1>
+
+    <form id="formularioComando">
+        <label for="comando">Digite o comando (TZO, OFF1, TZN, OFF2):</label><br>
+        <input type="text" id="comando" name="comando" required>
+        <button type="submit">Enviar Comando</button>
+    </form>
+
+    <p id="resposta" style="margin-top: 15px; font-weight: bold;"></p>
+
+    <script>
+        const form = document.getElementById("formularioComando");
+        const resposta = document.getElementById("resposta");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const comando = document.getElementById("comando").value.toUpperCase();
+
+            fetch(`/enviar_serial/${comando}/`)
+                .then(response => response.json())
+                .then(data => {
+                    resposta.textContent = data.mensagem;
+                    resposta.style.color = "green";
+                })
+                .catch(error => {
+                    resposta.textContent = "Erro ao enviar comando!";
+                    resposta.style.color = "red";
+                    console.error(error);
+                });
+        });
+    </script>
+
+</body>
+</html>

@@ -11,8 +11,10 @@
 //O caminho do mosquitto.exe (ex: C:\Program Files\mosquitto\mosquitto.exe)
 //O caminho do mosquitto.conf (ex: C:\mosquitto\mosquitto.conf)
 
+
 //COMANDO PARA RODAR O BROKER:
-//"C:\Program Files\mosquitto\mosquitto.exe" -c "C:\mosquitto\mosquitto.conf" -v
+// C:\>cd mosquitto
+// "C:\Program Files\mosquitto\mosquitto.exe" -c "C:\mosquitto\mosquitto.conf" -v
 
 
 #include <ESP8266WiFi.h>
@@ -20,7 +22,7 @@
 
 const char* ssid = "Familia Bueno - EvolutionPro-2G"; //usuario wifi da minha rede local
 const char* password = "asiv281006amv"; //senha wifi da minha rede local
-const char* mqttServer = "192.168.1.8"; //ip do seu computador
+const char* mqttServer = "192.168.1.6"; //ip do seu computador
 const int mqttPort = 1883;
 
 WiFiClient espClient;
@@ -63,6 +65,8 @@ void loop() {
     } else if (comando == "OFF2") {
       client.publish("sdkjgsdgryf45h3746/CAIXA/lampada2", comando.c_str());
       Serial.println("Desliga lampada tzn");
+    } else {
+      Serial.println("Rota não cadastrada, favor procurar o time do TI !!!");
     }
   }
 }

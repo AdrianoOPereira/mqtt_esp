@@ -3,7 +3,7 @@
 
 const char* ssid = "Familia Bueno - EvolutionPro-2G";
 const char* password = "asiv281006amv";
-const char* mqttServer = "192.168.1.8";
+const char* mqttServer = "192.168.1.6";
 const int mqttPort = 1883;
 const int lampadaPin = 2;  // Pino da lâmpada (GPIO2)
 
