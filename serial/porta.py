@@ -1,6 +1,3 @@
-# Comando para listar as portas utlizadas pelos esps conectados
-# python -m serial.tools.list_ports
-
 import serial
 import time
 import os

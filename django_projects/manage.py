@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-# env\Scripts\activate
-# python manage.py runserver
 
 """Django's command-line utility for administrative tasks."""
 

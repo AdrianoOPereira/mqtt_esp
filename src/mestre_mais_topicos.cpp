@@ -1,22 +1,3 @@
-//Criar um mosquitto.conf personalizado, Crie uma pasta:
-//C:\mosquitto\
-//Crie o arquivo:
-//C:\mosquitto\mosquitto.conf
-
-//Cole o seguinte conteúdo:
-//listener 1883
-//allow_anonymous true
-
-//Com as duas pasta criadas abaixo execute o comando no mcd para iniciar o borker:
-//O caminho do mosquitto.exe (ex: C:\Program Files\mosquitto\mosquitto.exe)
-//O caminho do mosquitto.conf (ex: C:\mosquitto\mosquitto.conf)
-
-
-//COMANDO PARA RODAR O BROKER:
-// C:\>cd mosquitto
-// "C:\Program Files\mosquitto\mosquitto.exe" -c "C:\mosquitto\mosquitto.conf" -v
-
-
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 

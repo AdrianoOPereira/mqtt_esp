@@ -4,7 +4,48 @@
 .vscode/launch.json
 .vscode/ipch
 
-.const char* ssid = "Familia Bueno - EvolutionPro-2G"; //usuario wifi da minha rede local
-.const char* password = "asiv281006amv"; //senha wifi da minha rede local
-.const char* mqttServer = "192.168.1.8"; //ip do seu computador
-.const int mqttPort = 1883;
+# const char* ssid = "Familia Bueno - EvolutionPro-2G"; //usuario wifi da minha rede local
+# const char* password = "asiv281006amv"; //senha wifi da minha rede local
+# const char* mqttServer = "192.168.1.8"; //ip do seu computador
+# const int mqttPort = 1883;
+
+# env\Scripts\activate
+# python manage.py runserver
+# "C:\Program Files\mosquitto\mosquitto.exe" -c "C:\mosquitto\mosquitto.conf" -v
+
+# Comando para listar as portas utlizadas pelos esps conectados
+# python -m serial.tools.list_ports
+
+# Criar um mosquitto.conf personalizado, Crie uma pasta:
+# C:\mosquitto\
+# Crie o arquivo:
+# C:\mosquitto\mosquitto.conf
+
+# Cole o seguinte conteúdo:
+# listener 1883
+# allow_anonymous true
+
+# Com as duas pasta criadas abaixo execute o comando no mcd para iniciar o borker:
+# O caminho do mosquitto.exe (ex: C:\Program Files\mosquitto\mosquitto.exe)
+# O caminho do mosquitto.conf (ex: C:\mosquitto\mosquitto.conf)
+
+# "C:\Program Files\mosquitto\mosquitto.exe" -c "C:\mosquitto\mosquitto.conf" -v
+
+
+# Criar um mosquitto.conf personalizado, Crie uma pasta:
+# C:\mosquitto\
+# Crie o arquivo:
+# C:\mosquitto\mosquitto.conf
+
+# Cole o seguinte conteúdo:
+# listener 1883
+# allow_anonymous true
+
+# Com as duas pasta criadas abaixo execute o comando no mcd para iniciar o borker:
+# O caminho do mosquitto.exe (ex: C:\Program Files\mosquitto\mosquitto.exe)
+# O caminho do mosquitto.conf (ex: C:\mosquitto\mosquitto.conf)
+
+
+# COMANDO PARA RODAR O BROKER:
+#  C:\>cd mosquitto
+#  "C:\Program Files\mosquitto\mosquitto.exe" -c "C:\mosquitto\mosquitto.conf" -v
