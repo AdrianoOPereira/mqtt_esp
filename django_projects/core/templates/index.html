@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="">
     <title>Controle da Lâmpada</title>
+
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         input, button { padding: 8px; margin: 5px; }
@@ -11,16 +12,16 @@
         form {text-align: center;}
         body {text-align: center;}
     </style>
+    
 </head>
 <body>
 
     <h1>Controle da Lâmpada</h1>
-
+    
     <form id="formularioComando">
         <label for="comando">Digite o comando (TZO, OFF1, TZN, OFF2):</label><br>
         <input type="text" id="comando" name="comando" required>
-        <button type="submit">Enviar Comando</button>
-        
+        <button type="submit">Enviar Comando</button>        
     </form>
 
     <p id="resposta" style="margin-top: 15px; font-weight: bold;"></p>
@@ -40,10 +41,11 @@
                     resposta.style.color = "green";
                 })
                 .catch(error => {
-                    resposta.textContent = "Erro ao enviar comando!";
+                    resposta.textContent = "Servidor desconectado!";
                     resposta.style.color = "red";
                     console.error(error);
                 });
+            document.getElementById("comando").value ="";
         });
     </script>
 

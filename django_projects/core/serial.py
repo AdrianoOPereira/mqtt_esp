@@ -9,3 +9,4 @@ except Exception as e:
     
     
 comandos_validos = ['TZO', 'OFF1', 'TZN', 'OFF2', 'TZS']    
+novas_rotas = []
