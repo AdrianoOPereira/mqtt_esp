@@ -1,21 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" href= "{% static 'css/styles.css' %}">
     <title>Controle da Lâmpada</title>
-
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        input, button { padding: 8px; margin: 5px; }
-        h1 {text-align: center;}
-        form {text-align: center;}
-        body {text-align: center;}
-    </style>
-    
 </head>
-<body>
 
+<body>
     <h1>Controle da Lâmpada</h1>
     
     <form id="formularioComando">
@@ -25,8 +17,7 @@
     </form>
 
     <p id="resposta" style="margin-top: 15px; font-weight: bold;"></p>
-
-    {% load static %}
+    
     <script src="{% static 'js/script.js' %}" async defer></script>
 </body>
 </html>
