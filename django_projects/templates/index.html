@@ -9,7 +9,12 @@
 
 <body>
     <h1>Controle da Lâmpada</h1>
-    
+
+    <p>Bem-vindo, {{ request.user.username }}!</p>
+    <a href="{% url 'logout' %}">Sair</a><br><br>
+
+
+
     <form id="formularioComando">
         <label for="comando">Digite o comando (TZO, OFF1, TZN, OFF2):</label><br>
         <input type="text" id="comando" name="comando" required>

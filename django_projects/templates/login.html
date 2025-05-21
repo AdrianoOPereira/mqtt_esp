@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+    <h2>Entrar no sistema</h2>
+    
+    {% if form.errors %}
+        <p style="color:red;">Usuário ou senha inválidos!</p>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Usuário:</label><br>
+        {{ form.username }}<br><br>
+
+        <label>Senha:</label><br>
+        {{ form.password }}<br><br>
+        
+        <button type="submit">Login</button>
+    </form>
+
+</body>
+</html>
