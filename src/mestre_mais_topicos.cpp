@@ -1,16 +1,16 @@
-#include <ESP8266WiFi.h>
-#include <PubSubClient.h>
+#include <ESP8266WiFi.h> // Biblioteca C++ específica do ESP8266 para conexão Wi-Fi
+#include <PubSubClient.h> // Biblioteca C++ para comunicação com broker MQTT (como Mosquitto)
 
 const char* ssid = "Familia Bueno - EvolutionPro-2G"; //usuario wifi da minha rede local
 const char* password = "asiv281006amv"; //senha wifi da minha rede local
-const char* mqttServer = "192.168.1.6"; //ip do seu computador
+const char* mqttServer = "192.168.1.9"; //ip do seu computador
 const int mqttPort = 1883;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(115200); //Inicializa a comunicação serial com o monitor serial a 115200 bauds (velocidade de transmissão de dados)
   WiFi.begin(ssid, password);
   
   while (WiFi.status() != WL_CONNECTED) {
@@ -25,9 +25,9 @@ void setup() {
 
 void loop() {
   if (!client.connected()) {
-    reconnect();
+    reconnect(); //Define o IP e porta do broker MQTT e chama a função reconnect() para conectar
   }
-  client.loop();
+  client.loop(); //client.loop() processa mensagens recebidas e mantém o cliente vivo
 
   // Verifica se há entrada no Monitor Serial
   if (Serial.available() > 0) {

@@ -1,3 +1,5 @@
+// https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/
+// https://github.com/knolleary/pubsubclient/blob/master/examples/mqtt_esp8266/mqtt_esp8266.ino
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 

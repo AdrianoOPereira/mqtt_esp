@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "core",
+    "bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -129,4 +130,5 @@ STATICFILES_DIRS = [
     # '/var/www/static/',
 ]
 
+LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'

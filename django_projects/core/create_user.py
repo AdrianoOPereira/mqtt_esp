@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # def create_initial_user(apps, schema_editor):
 def criar_usuario_inicial(apps, schema_editor):    
     if not User.objects.filter(username='adriano').exists():
-        user = User.objects.create_user(
+        user = User.objects.create_user( # para que a senha seja criptografada corretamente.
             username='adriano',
             email='adriano.oliveirapereira@gmail.com',
             password='visa18'
